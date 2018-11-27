@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    list-style: none;/*列表 */
+    padding: 0;
+    font-style: normal; /*i */
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+
+
+#content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("../img/bg2.jpg");
+    background-size: 100% auto;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    display: block;
+    /*border-bottom: 1px solid #CCCCCC;*/
+}
+.leftTop{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.titleTop{
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+}
+.rightTop{
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+.middle{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 8px;
+    overflow-y: scroll;
+
+}
+.cardbox{
+    width: 84%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.carditem{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    box-shadow:0 0 3px #6E56C6 inset;
+    background: #9070FF;
+    margin-bottom: 6px;
+    /*background: -moz-linear-gradient(135deg, #9070FF, #FFFFFF);
+    background: -webkit-gradient(linear,100% 100%,0% 0%,from(#9070FF),to(#FFFFFF));
+    background: -webkit-linear-gradient(135deg, #9070FF, #FFFFFF);
+    background: -o-linear-gradient(135deg, #9070FF, #FFFFFF);*/
+}
+.leftround{
+    width: 10%;
+    height: 30%;
+    background: #FFCC01;
+    position: absolute;
+    top: 30%;
+    border-radius: 50%;
+    left: -5%;
+    float: left;
+}
+.rightround{
+    width: 10%;
+    height: 30%;
+    background: #FFCC01;
+    position: absolute;
+    top: 30%;
+    border-radius: 50%;
+    right: 0;
+    float: right;
+    right: -5%;
+}
+.itembox{
+    width: 88%;
+    height: 94%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.itembox-l{
+    width: 30%;
+    height: 100%;
+    float: left;
+    font-size: 16px;
+    color: #FCF901;
+}
+.itembox-r{
+    width: 70%;
+    height: 100%;
+    float: right;
+    padding: 0px 6px;
+}
+.disPrice{
+    font-size: 2.8em;
+    font-weight: bolder;
+}
+.itembox-r span{
+    color: white;
+}
+.priceTitle{
+    font-size: 24px;
+}
+.wrie{
+    border:1px solid white;
+}
+.Cardname{
+    color: white;
+}
+.priceRule{
+    font-size: 16px;
+}
+.btn{
+    width: 60%;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    float: right;
+    background: #FEF000;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #9070FF;
+    margin-top: 6px;
+}
+
+
+
+
+@media (max-width: 290px) {
+    .priceRule{
+        font-size: 14px;
+    }
+}
+@media (max-width: 255px) {
+    .disPrice{
+        font-size: 2.8em;
+    }
+    .priceRule{
+        font-size: 12px;
+    }
+}
+@media (max-width: 250px) {
+    .disPrice{
+        font-size: 2.6em;
+    }
+}
+@media (max-width: 245px) {
+    .disPrice{
+        font-size: 2.2em;
+    }
+    .priceTitle{
+        font-size: 20px;
+    }
+}
+@media (max-width: 230px) {
+    .btn{
+        font-size: 12px;
+    }
+    .disPrice{
+        font-size: 2em;
+    }
+}
+@media (max-width: 200px) {
+    .disPrice{
+        font-size: 1.6em;
+    }
+}

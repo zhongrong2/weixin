@@ -1,0 +1,85 @@
+#concent{
+    width: 100%;
+    height: 100%;
+    padding:40px 20px;
+}
+#title{
+    width: 100%;
+    height: auto;
+}
+#title p{
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    font-weight: normal;
+    text-align: center;
+}
+#title span{
+    font-size: 22px;
+    font-family: "微软雅黑 Light";
+    font-weight: bold;
+    color: #00aa00;
+}
+#con{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+.choice{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.choice button{
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    padding:6px 16px;
+    border: 1px;
+    margin: auto 30px;
+    outline: none;
+}
+.cancel{
+    color: white;
+    border-color: #f90;
+    background-color: #f90;
+}
+.sure{
+    color: white;
+    border-color: #00aaee;
+    background-color: #00aaee;
+}
+#upload{
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.up-title{
+    width: 100%;
+    height: auto;
+}
+#upload p{
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    font-weight: 600;
+}
+.imgs{
+    width: 100%;
+    height: auto;
+}
+.addimg{
+    width: 26%;
+    height: auto;
+}
+.addimg img{
+    width: 100%;
+    height: 100%;
+}
+.explain{
+    width: 100%;
+    height: auto;
+    background-color: #00aa00;
+}

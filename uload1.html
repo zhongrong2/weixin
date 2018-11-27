@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上传行车本</title>
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/upload1.css">
+
+</head>
+<body>
+<div id="concent">
+    <div class="top">
+        <!--<img src="img/logo.png" alt="">-->
+    </div>
+    <!--标题开始-->
+    <div id="title">
+        <p>尊敬的“<span>MP3917</span>”用户您好，</br>请确认激活</p>
+    </div>
+    <!--标题结束-->
+    <!--上传行车本开始-->
+    <div id="upload">
+        <div class="up-title">
+            <p>请上传您的行驶证</p>
+        </div>
+        <div class="imgs">
+            <div class="addimg">
+                <img src="img/add.png" alt="" class="add" id="img">
+            </div>
+            <input type="hidden" disabled id="serverId" value="">
+        </div>
+        <div class="explain">
+
+        </div>
+    </div>
+    <!--上传行车本结束-->
+    <!--选择内容开始-->
+    <div id="con">
+        <div class="choice">
+            <button class="cancel">取消</button>
+            <button class="sure">确定</button>
+        </div>
+    </div>
+    <!--选择内容结束-->
+</div>
+</body>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+    // 取消
+    $(".cancel").click(function () {
+        console.log("注册失败");
+        window.history.back(-1);
+    })
+    //确定
+    $(".sure").click(function () {
+        console.log("保存成功");
+    })
+    //选择图片
+    $(document).ready(function () {
+        var url = location.href.split('#')[0];
+        $.ajax({
+            url:"",
+            data:"url",
+            type:"post",
+            dataType:"json",
+            success:function (data) {
+                var timestamp = data.timestamp;
+                var noncestr = data.nonceStr;
+                var signature = data.signature;
+                //通过config接口注入权限验证配置
+                wx.config({
+                    debug: true,
+                    appId: data.appId,
+                    timestamp: timestamp,
+                    nonceStr: noncestr,
+                    signature: signature,
+                    jsApiList: ['chooseImage', 'uploadImage']
+                });
+            }
+        });
+
+        wx.error(function(res){
+            console.log(res)
+        });
+
+        $(".add").click(function () {
+            console.log("调用手机");
+            wx.chooseImage({
+                count: 1, // 默认9
+                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                success: function (res) {
+                    var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                    console.log(localIds);
+                    $("#img").attr("src",localIds);
+                    // 图片上传微信服务器
+                    wx.uploadImage({
+                        localId: '', // 需要上传的图片的本地ID，由chooseImage接口获得
+                        isShowProgressTips: 1, // 默认为1，显示进度提示
+                        success: function (res) {
+                            var serverId = res.serverId; // 返回图片的服务器端ID
+                            $("#serverId").attr("value",serverId);
+                        }
+                    });
+                }
+            });
+        })
+    })
+</script>
+
+</html>

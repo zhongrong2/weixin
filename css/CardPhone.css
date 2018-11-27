@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    list-style: none;/*列表 */
+    padding: 0;
+    font-style: normal; /*i */
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+#con{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    background-image: url("../img/bg.jpg");
+    background-size: 100% auto;
+}
+.conTop{
+    width: 100%;
+    height: 26%;
+    /*background-color: white;*/
+    padding-top: 6%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.img{
+    width: 24%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 50%   50%  50%  50% ;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%   50%  50%  50% ;
+}
+.conTop-title{
+    width: 100%;
+    height: auto;
+}
+.conTop-title p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff2814;
+    padding-top: 10px;
+}
+.conFoot{
+    width: 100%;
+    height: 74%;
+}
+#content{
+    width: 100%;
+    height: 100%;
+    padding-top: 30%;
+    display: block;
+}
+.box{
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+.top{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.top input{
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    padding:6px;
+    background-color: white;
+    border:1px solid #CCCCCC;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.foot{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+.btn{
+    width: 50%;
+    height: 40px;
+    border:1px solid #2dcc4b;
+    border-radius: 30px;
+    margin: 0 auto;
+    background-color: #2dcc4b;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 300px) {
+    .top span{
+        width: 24%;
+    }
+    .top input{
+        width: 70%;
+    }
+}
+@media (max-width: 250px) {
+    .top span{
+        width: 26%;
+    }
+    .top input{
+        width: 70%;
+    }
+}
+@media (max-width: 236px) {
+    .top span{
+        width: 30%;
+    }
+    .top input{
+        width: 66%;
+    }
+}
+@media (max-width: 200px) {
+    .top span{
+        width: 34%;
+    }
+    .top input{
+        width: 62%;
+    }
+}

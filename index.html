@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信公众号领券页面</title>
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+
+
+</head>
+<body>
+<div id="con">
+    <div class="top"></div>
+    <div id="box">
+        <div class="box-top">
+            <input type="text" id="test" class="txt" value="11333222" disabled>
+
+        </div>
+        <div class="content">
+            <h3>规则说明：</h3>
+            <p>1、仅限会员车辆使用</p>
+            <p>2、使用后请当天确认洗车</p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    // input宽度自适应
+    var testLength = document.getElementById('test').value.length;
+    $(".txt").css('width', testLength*12 + 'px');
+</script>
+
+</html>

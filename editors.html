@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>编辑会员</title>
+
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/editors.css">
+
+    <link rel="stylesheet" href="css/carNumber.css">
+    <link rel="stylesheet" href="layer_mobile/need/layer.css">
+
+
+</head>
+<body>
+<div id="container">
+    <div id="top">
+        <div class="top">
+            <div class="top-title">
+                <p>尊敬的“<span class="top-user">京M1111</span>”用户，您好：</p>
+                <p>1、您选择的车主身份为滴滴用户</p>
+                <p>2、请上传您车辆照片或者驾驶证，最多可以上传3张</p>
+                <p>3、我们会在48小时之内审核，结果将通过公众号通知</p>
+            </div>
+        </div>
+    </div>
+    <form id="info">
+        <div class="info">
+            <ul>
+                <li>
+                    <span class="info-title">修改会员信息</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span>手机号</span>
+                    <input type="text" id="phone" autocomplete="off" value="11111">
+                </li>
+                <li>
+                    <span>车牌号1</span>
+                    <input type="text" id="carnum1" autocomplete="off" placeholder="请输入车牌号1" class="carText1">
+                </li>
+                <!--<li>
+                    <span>车主优选</span>
+                    <div class="right">&gt</div>
+                </li>-->
+            </ul>
+            <ul>
+                <!--<li>
+                    <span>生日</span>
+                    <input type="date" id="birthday" autocomplete="off">
+                </li>-->
+                <li>
+                    <span>车牌号2</span>
+                    <input type="text" id="carnum2" autocomplete="off" placeholder="请输入车牌号2" class="carText2">
+                </li>
+                <li>
+                    <span>车牌号3</span>
+                    <input type="text" id="carnum3" autocomplete="off" placeholder="请输入车牌号3" class="carText3">
+                </li>
+            </ul>
+            <ul id="checkbox">
+                <!--<input type="checkbox" class="checkbox" checked="checked" value="我已阅读并同意">我已阅读并同意
+                <a href="">会员卡信息使用说明</a>-->
+
+            </ul>
+        </div>
+        <div class="btn">立即修改</div>
+    </form>
+    <!--<div class="foot">
+        <div class="foot-pro">
+            &lt;!&ndash;<p>个人资料将由并仅限天兴趣生活使用</p>&ndash;&gt;
+        </div>
+    </div>-->
+</div>
+</body>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script src="layer_mobile/layer.js"></script>
+<script src="js/CarNumber.js"></script>
+
+<script src="js/editors.js"></script>
+
+</html>
